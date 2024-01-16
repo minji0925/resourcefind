@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Site</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_search.css') }}">
+</head>
+<body>
+
+    <nav>
+        <ul class="navbar">
+          <li><a href="/">Home</a></li>
+          <li><a href="search">Search</a></li>
+          <li><a href="directory">Directory</a></li>
+          <li><a href="ai">AI</a></li>
+          <li><a href="resource_submissions">Resource Submissions</a></li>
+        </ul>
+      </nav>
+
+    <div class="container">
+        <div class="search-section">
+          <div class="search-panel">
+            <h2>Search</h2>
+            <form action="/search" method="post">
+              <div class="search-input">
+                <input type="text" name="search_query" placeholder="Enter your search query">
+                <button type="submit" class="search-button">Search</button>
+              </div>
+              <div class="resource_type">
+                <label for="resource_type">Resource Type: </label>
+                <select name="tag[]" class="tag-dropdown" multiple>
+                  <option value="book">Book</option>
+                  <option value="internship">Internship</option>
+                  <option value="school">School</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <div class="results-section">
+            {% for row in resources_list %}
+            <div class="result">
+            <h3><a href="{{ row[1] }}" class="url" target="_blank">{{ row[0] }}</a></h3>
+            <p>{{ row[2] }}</p>
+            </div>
+            {% endfor %}
+          
+        </div>
+      </div>
+      
+      </body>
+      </html>

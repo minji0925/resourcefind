@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submission Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_submit.css') }}">
+</head>
+<body>
+
+  <nav>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="search">Search</a></li>
+    <li><a href="directory">Directory</a></li>
+    <li><a href="ai">AI</a></li>
+      <li><a href="resource_submissions">Resource Submissions</a></li>
+    </ul>
+  </nav>
+
+<div class="container">
+  <h2>Resource Submission Form</h2>
+  <form action="/submit" method="post">
+    <div class="form-group">
+      <label for="name">Resource Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="url">URL:</label>
+      <input type="url" id="url" name="url" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+    </div>
+    <div class="tag-group">
+      <label for="tag">Tags:</label>
+      <label>
+        <input type="checkbox" name="tag[]" value="book">
+        <span class="tag">Book</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="youtube_channel">
+        <span class="tag">YouTube channel</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="discord_server">
+        <span class="tag">Discord server</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="website">
+        <span class="tag">Website</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="internship">
+        <span class="tag">Internship</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="school">
+        <span class="tag">School</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="online_learning_resource">
+        <span class="tag">Online learning resource</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="summer_camp">
+        <span class="tag">Summer camp</span>
+      </label>
+      <label>
+        <input type="checkbox" name="tag[]" value="other">
+        <span class="tag">Other</span>
+      </label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  nav {
+    background-color: #333;
+  }
+  
+  .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar li a:hover {
+    background-color: #111;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+  }
+  
+  .search-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .search-panel {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-panel h2 {
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  .search-input {
+    margin-bottom: 10px;
+  }
+  
+  .search-input input[type="text"] {
+    width: calc(100% - 82px);
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #333;
+  }
+  
+  .search-input button {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-input button:hover {
+    background-color: #2980b9;
+  }
+  
+  .tags {
+    margin-top: 10px;
+  }
+  
+  .tag {
+    display: none;
+  }
+  
+  .tag + label {
+    display: inline-block;
+    background-color: #444;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tag:checked + label {
+    background-color: #3498db;
+  }
+  
+  .results-section {
+    flex: 3;
+  }
+  
+  .result {
+    background-color: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result h3 {
+    margin-top: 0;
+  }
+  
+  .url {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+  
+  .url:hover {
+    color: #2980b9;
+  }
